@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Text, View, Image, TouchableOpacity } from 'react-native';
 
-//HOC
-import withUserHOC from '../hocs/withUserHOC';
+//status bar
+import { MyStatusBar } from './StatusBar';
 
 //Icon
 import IonIcon from 'react-native-vector-icons/Ionicons';
@@ -20,6 +20,7 @@ class DrawerContentComponent extends Component {
 
     return (
       <View style={styles.container}>
+        <MyStatusBar backgroundColor="#fff" barStyle="dark-content" />
         <View style={styles.screenContainerFirst}>
           <TouchableOpacity
             style={styles.navigationCell}
@@ -39,4 +40,4 @@ class DrawerContentComponent extends Component {
   }
 }
 
-export default withUserHOC(DrawerContentComponent);
+export default DrawerContentComponent;

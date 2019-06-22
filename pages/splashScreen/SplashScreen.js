@@ -3,9 +3,6 @@ import { View, Text, Image, ActivityIndicator } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import { connect } from 'react-redux';
 
-//HOC
-import withUserHOC from '../../hocs/withUserHOC';
-
 //actions
 import {} from '../../ducks/user/action';
 
@@ -47,4 +44,4 @@ const withConnect = connect(
   mapDispatchToProps
 );
 
-export default withUserHOC(withConnect(SplashScreen));
+export default withConnect(SplashScreen);
