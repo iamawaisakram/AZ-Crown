@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
+import { widthPercentageToDP } from 'react-native-responsive-screen';
 
 //StatusBae
 import { MyStatusBar } from './StatusBar';
@@ -18,30 +19,43 @@ class Header extends Component {
   }
 
   render() {
+    const {
+      statusBarColor,
+      navigation,
+      leftIcon,
+      rightIcon,
+      title
+    } = this.props;
     return (
       <View>
         <MyStatusBar
-          backgroundColor={this.props.statusBarColor}
-          barStyle="dark-content"
+          backgroundColor={statusBarColor}
+          barStyle="light-content"
         />
-        <View
-          style={[
-            styles.header,
-            { backgroundColor: this.props.statusBarColor }
-          ]}
-        >
-          <TouchableOpacity
-            style={styles.icon}
-            onPress={() => this.props.navigation.toggleDrawer()}
+        <View style={[styles.header, { backgroundColor: statusBarColor }]}>
+          {leftIcon && (
+            <TouchableOpacity
+              style={styles.icon}
+              onPress={() => navigation.toggleDrawer()}
+            >
+              <Icon name="align-left" size={30} color="#fff" />
+            </TouchableOpacity>
+          )}
+          <View
+            style={[
+              styles.title,
+              !leftIcon && !rightIcon
+                ? { width: widthPercentageToDP('100%') }
+                : ''
+            ]}
           >
-            <Icon name="align-left" size={30} color="#fff" />
-          </TouchableOpacity>
-          <View style={styles.title}>
-            <Text style={[styles.titleText, { color: '#fff' }]}>Home</Text>
+            <Text style={[styles.titleText, { color: '#fff' }]}>{title}</Text>
           </View>
-          <TouchableOpacity style={styles.icon}>
-            <Icon name="bell" size={30} color="#fff" />
-          </TouchableOpacity>
+          {rightIcon && (
+            <TouchableOpacity style={styles.icon}>
+              <Icon name="bell" size={30} color="#fff" />
+            </TouchableOpacity>
+          )}
         </View>
       </View>
     );

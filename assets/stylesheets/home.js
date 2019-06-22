@@ -31,9 +31,10 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   menuItem: {
+    elevation: 3,
     height: hp('13%'),
     backgroundColor: SECONDARY_COLOR,
-    width: wp('40%'),
+    width: wp('45%'),
     margin: 5,
     alignItems: 'center',
     justifyContent: 'center'

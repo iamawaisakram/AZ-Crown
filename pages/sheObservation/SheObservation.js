@@ -13,14 +13,14 @@ import { PRIMARY_COLOR, SECONDARY_COLOR } from '../../config';
 //style
 import styles from '../../assets/stylesheets/home';
 
-class Home extends Component {
+class SheObservation extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Header
-          leftIcon={true}
-          rightIcon={true}
-          title="Home"
+          leftIcon={false}
+          rightIcon={false}
+          title="She Observations"
           statusBarColor={PRIMARY_COLOR}
           secondaryColor={SECONDARY_COLOR}
           {...this.props}

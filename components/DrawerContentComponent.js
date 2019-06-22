@@ -5,10 +5,14 @@ import { Text, View, Image, TouchableOpacity } from 'react-native';
 import { MyStatusBar } from './StatusBar';
 
 //Icon
-import IonIcon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/Feather';
+import MCIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 //style
 import styles from '../assets/stylesheets/drawer';
+
+//config
+import { PRIMARY_COLOR, CONTRAST_COLOR } from '../config';
 
 class DrawerContentComponent extends Component {
   navigateToScreen(route) {
@@ -16,23 +20,51 @@ class DrawerContentComponent extends Component {
   }
 
   render() {
-    const { currentUser } = this.props;
-
     return (
       <View style={styles.container}>
-        <MyStatusBar backgroundColor="#fff" barStyle="dark-content" />
-        <View style={styles.screenContainerFirst}>
+        <MyStatusBar backgroundColor={PRIMARY_COLOR} barStyle="light-content" />
+        <View style={styles.screenContainer}>
           <TouchableOpacity
             style={styles.navigationCell}
             onPress={() => this.navigateToScreen('Home')}
           >
-            <IonIcon
-              name="md-car"
-              color="#000"
-              size={20}
-              style={styles.cellIcon}
-            />
-            <Text style={styles.navigationCellText}>Vehicles</Text>
+            <View style={styles.cellIcon}>
+              <Icon name="user" color={CONTRAST_COLOR} size={30} />
+            </View>
+            <Text style={styles.navigationCellText}>Karim Ali</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.screenContainer}>
+          <TouchableOpacity
+            style={styles.navigationCell}
+            onPress={() => this.navigateToScreen('Home')}
+          >
+            <View style={styles.cellIcon}>
+              <MCIcon name="lock-reset" color={CONTRAST_COLOR} size={30} />
+            </View>
+            <Text style={styles.navigationCellText}>Reset Password</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.screenContainer}>
+          <TouchableOpacity
+            style={styles.navigationCell}
+            onPress={() => this.navigateToScreen('Home')}
+          >
+            <View style={styles.cellIcon}>
+              <Icon name="log-out" color={CONTRAST_COLOR} size={30} />
+            </View>
+            <Text style={styles.navigationCellText}>Logout</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.screenContainer}>
+          <TouchableOpacity
+            style={styles.navigationCell}
+            onPress={() => this.navigateToScreen('Home')}
+          >
+            <View style={styles.cellIcon}>
+              <Icon name="user-plus" color={CONTRAST_COLOR} size={30} />
+            </View>
+            <Text style={styles.navigationCellText}>Create New Account</Text>
           </TouchableOpacity>
         </View>
       </View>

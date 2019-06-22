@@ -15,6 +15,9 @@ import SplashScreen from './pages/splashScreen/SplashScreen';
 //Home
 import Home from './pages/home/Home';
 
+//Login
+import Login from './pages/login/Login';
+
 const drawerNavigator = createDrawerNavigator(
   {
     Home: {
@@ -29,7 +32,7 @@ const drawerNavigator = createDrawerNavigator(
     navigationOptions: {
       drawerLockMode: 'locked-close'
     },
-    // drawerType: 'slide',
+    drawerType: 'slide',
     // overlayColor: '00FFFFF',
     drawerWidth: wp('60%'),
     contentComponent: DrawerContentComponent
@@ -40,6 +43,7 @@ export default createAppContainer(
   createSwitchNavigator(
     {
       SplashScreen,
+      Login,
       drawerNavigator
     },
     {
