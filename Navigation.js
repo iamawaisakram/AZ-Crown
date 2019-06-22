@@ -9,6 +9,9 @@ import { widthPercentageToDP as wp } from 'react-native-responsive-screen';
 //drawerComponent
 import DrawerContentComponent from './components/DrawerContentComponent';
 
+//SplashScree
+import SplashScreen from './pages/splashScreen/SplashScreen';
+
 //Home
 import Home from './pages/home/Home';
 
@@ -36,10 +39,11 @@ const drawerNavigator = createDrawerNavigator(
 export default createAppContainer(
   createSwitchNavigator(
     {
+      SplashScreen,
       drawerNavigator
     },
     {
-      initialRouteName: 'drawerNavigator',
+      initialRouteName: 'SplashScreen',
       headerMode: 'none'
     }
   )

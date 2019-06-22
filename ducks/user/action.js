@@ -14,15 +14,6 @@ import {
   UPDATE_CURRENT_USER
 } from './actionTypes';
 
-//Apollo Mutations/Queries
-import {
-  LOGIN_USER,
-  SIGNUP_USER,
-  FORGOT_PASSWORD,
-  GET_USER_BY_TOKEN,
-  UPDATE_USER
-} from '../../queries/user';
-
 export const getUserByToken = (client, token) => ({
   type: GET_USER
 });
