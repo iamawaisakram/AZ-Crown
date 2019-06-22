@@ -4,12 +4,16 @@ import {
   heightPercentageToDP as hp
 } from 'react-native-responsive-screen';
 
+//config
+import { SECONDARY_COLOR } from '../../config';
+
 export default StyleSheet.create({
   container: {
     width: wp('100%'),
-    height: hp('94%'),
+    height: hp('100%'),
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: SECONDARY_COLOR
   },
   imageView: {
     width: wp('100%'),
@@ -32,6 +36,7 @@ export default StyleSheet.create({
   },
   indicatiorView: {
     width: wp('100%'),
+    marginBottom: hp('2%'),
     justifyContent: 'center',
     alignItems: 'center',
     position: 'absolute',

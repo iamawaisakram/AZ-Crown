@@ -20,19 +20,27 @@ class Header extends Component {
   render() {
     return (
       <View>
-        <MyStatusBar backgroundColor="#fff" barStyle="dark-content" />
-        <View style={styles.header}>
+        <MyStatusBar
+          backgroundColor={this.props.statusBarColor}
+          barStyle="dark-content"
+        />
+        <View
+          style={[
+            styles.header,
+            { backgroundColor: this.props.statusBarColor }
+          ]}
+        >
           <TouchableOpacity
             style={styles.icon}
             onPress={() => this.props.navigation.toggleDrawer()}
           >
-            <Icon name="align-left" size={30} color="#000" />
+            <Icon name="align-left" size={30} color="#fff" />
           </TouchableOpacity>
           <View style={styles.title}>
-            <Text style={styles.titleText}>Home</Text>
+            <Text style={[styles.titleText, { color: '#fff' }]}>Home</Text>
           </View>
           <TouchableOpacity style={styles.icon}>
-            <Icon name="bell" size={30} color="#000" />
+            <Icon name="bell" size={30} color="#fff" />
           </TouchableOpacity>
         </View>
       </View>

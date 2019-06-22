@@ -3,6 +3,9 @@ import { View, Text, Image, ActivityIndicator } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
 import { connect } from 'react-redux';
 
+//header
+import Header from '../../components/Header';
+
 //actions
 import {} from '../../ducks/user/action';
 

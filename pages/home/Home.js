@@ -7,19 +7,47 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
+
+//Components
+import Header from '../../components/Header';
+
+//Menu data
+import { homeMenuLeft, homeMenuRight } from '../../utils/homeMenu';
+
+//config
+import { PRIMARY_COLOR, SECONDARY_COLOR } from '../../config';
 
 //style
 import styles from '../../assets/stylesheets/home';
-import Header from '../../components/Header';
 
 class Home extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header {...this.props} />
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
+        <Header
+          statusBarColor={PRIMARY_COLOR}
+          secondaryColor={SECONDARY_COLOR}
+          {...this.props}
+        />
+        <View style={styles.menu}>
+          <View style={styles.leftMenu}>
+            {homeMenuLeft.map((item, i) => (
+              <TouchableOpacity key={i} style={styles.menuItem}>
+                <Image source={item.icon} style={styles.icon} />
+                <Text style={styles.itemTitle}>{item.title}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+          <View style={styles.rightMenu}>
+            {homeMenuRight.map((item, i) => (
+              <TouchableOpacity key={i} style={styles.menuItem}>
+                <Image source={item.icon} style={styles.icon} />
+                <Text style={styles.itemTitle}>{item.title}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+        </View>
       </View>
     );
   }

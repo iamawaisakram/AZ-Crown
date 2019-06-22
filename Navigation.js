@@ -29,8 +29,8 @@ const drawerNavigator = createDrawerNavigator(
     navigationOptions: {
       drawerLockMode: 'locked-close'
     },
-    drawerType: 'slide',
-    overlayColor: '00FFFFF',
+    // drawerType: 'slide',
+    // overlayColor: '00FFFFF',
     drawerWidth: wp('60%'),
     contentComponent: DrawerContentComponent
   }
