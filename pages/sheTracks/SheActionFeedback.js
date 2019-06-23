@@ -20,7 +20,7 @@ import styles from '../../assets/stylesheets/sheObservation';
 //config
 import { CONTRAST_COLOR } from '../../config';
 
-class AssignedStopCard extends Component {
+class SheActionFeedback extends Component {
   constructor(props) {
     super(props);
 
@@ -41,7 +41,7 @@ class AssignedStopCard extends Component {
   }
 
   render() {
-    const { comment, observationDetails } = this.state;
+    const { comment, feedbackDetails, observationDetails } = this.state;
     return (
       <View
         style={styles.container}
@@ -51,21 +51,34 @@ class AssignedStopCard extends Component {
           leftIcon={false}
           rightIcon={false}
           backIcon={true}
-          backTo={'StopCardFeedback'}
-          title="Assigned Stop Card"
+          backTo={'Home'}
+          title="She Action Feedback"
           {...this.props}
         />
         <View style={styles.inputContainers}>
-          <View style={styles.inputAndPhotoAssign}>
+          <View style={styles.inputAndPhoto}>
             <TextInput
-              style={styles.observationDetailsAssignedCard}
+              style={styles.observationDetails}
               multiline={true}
               value={observationDetails}
               placeholder="Observation Details"
               placeholderTextColor={CONTRAST_COLOR}
               onChangeText={value => this.setValue('observationDetails', value)}
             />
-            <View style={styles.photoViewAssignedCard}>
+            <View style={styles.photoView}>
+              <Icon name="image" color={CONTRAST_COLOR} size={40} />
+            </View>
+          </View>
+          <View style={styles.inputAndPhoto}>
+            <TextInput
+              style={styles.observationDetails}
+              multiline={true}
+              value={feedbackDetails}
+              placeholder="Feedback Details"
+              placeholderTextColor={CONTRAST_COLOR}
+              onChangeText={value => this.setValue('feedbackDetails', value)}
+            />
+            <View style={styles.photoView}>
               <Icon name="image" color={CONTRAST_COLOR} size={40} />
             </View>
           </View>
@@ -79,40 +92,18 @@ class AssignedStopCard extends Component {
               onChangeText={value => this.setValue('comment', value)}
             />
           </View>
-          <TouchableOpacity style={styles.select}>
-            <View style={styles.toView}>
-              <Text style={styles.toText}>TO:</Text>
-            </View>
-            <View style={styles.ccView}>
-              <Text style={styles.ccText}>Click to select the User</Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.select}>
-            <View style={styles.toView}>
-              <Text style={styles.toText}>CC:</Text>
-            </View>
-            <View style={styles.ccView}>
-              <Text style={styles.ccText}>Click to select the User</Text>
-            </View>
-          </TouchableOpacity>
-          <View style={styles.buttonsView}>
-            <TouchableOpacity style={styles.button}>
-              <Icon name="camera" color={CONTRAST_COLOR} size={25} />
+          <View style={styles.multipleButtonsView}>
+            <TouchableOpacity style={styles.multipleButton}>
+              <Text style={styles.submitText}>Accept & Close</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
-              <Icon name="video" color={CONTRAST_COLOR} size={25} />
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
-              <Icon name="paperclip" color={CONTRAST_COLOR} size={25} />
+            <TouchableOpacity style={styles.multipleButton}>
+              <Text style={styles.submitText}>Reject & Re-Assign</Text>
             </TouchableOpacity>
           </View>
-          <TouchableOpacity style={styles.submitButton}>
-            <Text style={styles.submitText}>Submit</Text>
-          </TouchableOpacity>
         </View>
       </View>
     );
   }
 }
 
-export default AssignedStopCard;
+export default SheActionFeedback;

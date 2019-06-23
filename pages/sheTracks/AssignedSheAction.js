@@ -20,7 +20,7 @@ import styles from '../../assets/stylesheets/sheObservation';
 //config
 import { CONTRAST_COLOR } from '../../config';
 
-class AssignedStopCard extends Component {
+class AssignedSheAction extends Component {
   constructor(props) {
     super(props);
 
@@ -51,8 +51,8 @@ class AssignedStopCard extends Component {
           leftIcon={false}
           rightIcon={false}
           backIcon={true}
-          backTo={'StopCardFeedback'}
-          title="Assigned Stop Card"
+          backTo={'SheActionFeedback'}
+          title="Assigned She Action"
           {...this.props}
         />
         <View style={styles.inputContainers}>
@@ -115,4 +115,4 @@ class AssignedStopCard extends Component {
   }
 }
 
-export default AssignedStopCard;
+export default AssignedSheAction;

@@ -40,7 +40,11 @@ class Home extends Component {
           </View>
           <View style={styles.rightMenu}>
             {homeMenuRight.map((item, i) => (
-              <TouchableOpacity key={i} style={styles.menuItem}>
+              <TouchableOpacity
+                key={i}
+                style={styles.menuItem}
+                onPress={() => navigation.navigate(item.key)}
+              >
                 <Image source={item.icon} style={styles.icon} />
                 <Text style={styles.itemTitle}>{item.title}</Text>
               </TouchableOpacity>

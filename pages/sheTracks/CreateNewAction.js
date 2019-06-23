@@ -20,14 +20,14 @@ import styles from '../../assets/stylesheets/sheObservation';
 //config
 import { CONTRAST_COLOR } from '../../config';
 
-class AssignedStopCard extends Component {
+class CreateNewAction extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      actionDetails: '',
       comment: '',
-      feedbackDetails: '',
-      observationDetails: ''
+      title: ''
     };
   }
 
@@ -41,7 +41,7 @@ class AssignedStopCard extends Component {
   }
 
   render() {
-    const { comment, observationDetails } = this.state;
+    const { actionDetails, title } = this.state;
     return (
       <View
         style={styles.container}
@@ -51,34 +51,42 @@ class AssignedStopCard extends Component {
           leftIcon={false}
           rightIcon={false}
           backIcon={true}
-          backTo={'StopCardFeedback'}
-          title="Assigned Stop Card"
+          backTo={'SheTracks'}
+          title="Create New Action"
           {...this.props}
         />
         <View style={styles.inputContainers}>
-          <View style={styles.inputAndPhotoAssign}>
-            <TextInput
-              style={styles.observationDetailsAssignedCard}
-              multiline={true}
-              value={observationDetails}
-              placeholder="Observation Details"
-              placeholderTextColor={CONTRAST_COLOR}
-              onChangeText={value => this.setValue('observationDetails', value)}
-            />
-            <View style={styles.photoViewAssignedCard}>
-              <Icon name="image" color={CONTRAST_COLOR} size={40} />
+          <TouchableOpacity style={styles.select}>
+            <View style={styles.ccView}>
+              <Text style={styles.ccText}>
+                Click to select the Issuance Date
+              </Text>
             </View>
+          </TouchableOpacity>
+          <View style={styles.simpleInput}>
+            <TextInput
+              style={styles.input}
+              value={title}
+              onChangeText={value => this.setValue('title', value)}
+              placeholder="Action Title"
+              placeholderTextColor={CONTRAST_COLOR}
+            />
           </View>
           <View style={styles.descriptionView}>
             <TextInput
               multiline={true}
-              placeholder="Insert Comment"
+              placeholder="Insert Action Details"
               placeholderTextColor={CONTRAST_COLOR}
-              value={comment}
+              value={actionDetails}
               style={styles.commentInput}
-              onChangeText={value => this.setValue('comment', value)}
+              onChangeText={value => this.setValue('actionDetails', value)}
             />
           </View>
+          <TouchableOpacity style={styles.select}>
+            <View style={styles.ccView}>
+              <Text style={styles.ccText}>Click to select the Due Date</Text>
+            </View>
+          </TouchableOpacity>
           <TouchableOpacity style={styles.select}>
             <View style={styles.toView}>
               <Text style={styles.toText}>TO:</Text>
@@ -115,4 +123,4 @@ class AssignedStopCard extends Component {
   }
 }
 
-export default AssignedStopCard;
+export default CreateNewAction;

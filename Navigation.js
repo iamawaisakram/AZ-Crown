@@ -26,6 +26,12 @@ import AssignedStopCard from './pages/sheObservation/AssignedStopCard';
 import CreateGoCard from './pages/sheObservation/CreateGoCard';
 import AssignedGoCard from './pages/sheObservation/AssignedGoCard';
 
+//She Tracks
+import SheTracks from './pages/sheTracks/SheTracks';
+import CreateNewAction from './pages/sheTracks/CreateNewAction';
+import SheActionFeedback from './pages/sheTracks/SheActionFeedback';
+import AssignedSheAction from './pages/sheTracks/AssignedSheAction';
+
 const drawerNavigator = createDrawerNavigator(
   {
     Home: {
@@ -54,10 +60,13 @@ const stackNavigator = createStackNavigator(
     StopCardFeedback,
     AssignedStopCard,
     CreateGoCard,
-    AssignedGoCard
+    AssignedGoCard,
+    SheTracks,
+    CreateNewAction,
+    SheActionFeedback,
+    AssignedSheAction
   },
   {
-    initialRouteName: 'SheObservation',
     headerMode: 'none'
   }
 );

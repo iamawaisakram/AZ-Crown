@@ -1,4 +1,4 @@
-import { StyleSheet, Platform, StatusBar } from 'react-native';
+import { StyleSheet, Platform } from 'react-native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp
@@ -13,6 +13,24 @@ export default StyleSheet.create({
     alignItems: 'center',
     backgroundColor: PRIMARY_COLOR
   },
+  sheTracksMenu: {
+    width: wp('60%'),
+    height: hp('60%'),
+    justifyContent: 'space-evenly'
+  },
+  panel: {
+    width: wp('60%'),
+    height: hp('10%'),
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: SECONDARY_COLOR
+  },
+  panelText: {
+    fontSize: wp('4%'),
+    color: CONTRAST_COLOR,
+    fontWeight: '600'
+  },
+
   menu: {
     width: wp('95%'),
     flexDirection: 'row',
@@ -85,20 +103,6 @@ export default StyleSheet.create({
   commentInput: {
     width: wp('87%'),
     height: hp('14%'),
-    color: CONTRAST_COLOR
-  },
-  simpleInput: {
-    width: wp('90%'),
-    height: hp('7%'),
-    alignItems: 'center',
-    borderBottomColor: CONTRAST_COLOR,
-    borderBottomWidth: 1,
-    marginTop: hp('2%'),
-    marginBottom: hp('2%')
-  },
-  input: {
-    width: wp('90%'),
-    height: hp('7%'),
     color: CONTRAST_COLOR
   },
   select: {
@@ -180,22 +184,6 @@ export default StyleSheet.create({
     textAlign: 'center'
   },
   inputAndPhoto: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: wp('90%'),
-    margin: 5
-  },
-  inputAndPhotoAssign: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    width: wp('90%'),
-    margin: 5,
-    borderColor: CONTRAST_COLOR,
-    borderWidth: 1
-  },
-  inputAndPhotoAssign: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
