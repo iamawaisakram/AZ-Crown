@@ -11,6 +11,9 @@ import Icon from 'react-native-vector-icons/Feather';
 //style
 import styles from '../assets/stylesheets/header';
 
+//config
+import { PRIMARY_COLOR, CONTRAST_COLOR } from '../config';
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -24,36 +27,43 @@ class Header extends Component {
       navigation,
       leftIcon,
       rightIcon,
-      title
+      title,
+      backIcon,
+      backTo
     } = this.props;
     return (
       <View>
-        <MyStatusBar
-          backgroundColor={statusBarColor}
-          barStyle="light-content"
-        />
-        <View style={[styles.header, { backgroundColor: statusBarColor }]}>
+        <MyStatusBar backgroundColor={PRIMARY_COLOR} barStyle="light-content" />
+        <View style={[styles.header]}>
           {leftIcon && (
             <TouchableOpacity
               style={styles.icon}
               onPress={() => navigation.toggleDrawer()}
             >
-              <Icon name="align-left" size={30} color="#fff" />
+              <Icon name="align-left" size={30} color={CONTRAST_COLOR} />
+            </TouchableOpacity>
+          )}
+          {backIcon && (
+            <TouchableOpacity
+              style={styles.icon}
+              onPress={() => navigation.navigate(backTo)}
+            >
+              <Icon name="chevron-left" size={30} color={CONTRAST_COLOR} />
             </TouchableOpacity>
           )}
           <View
             style={[
               styles.title,
-              !leftIcon && !rightIcon
+              !leftIcon && !rightIcon && !backIcon
                 ? { width: widthPercentageToDP('100%') }
                 : ''
             ]}
           >
-            <Text style={[styles.titleText, { color: '#fff' }]}>{title}</Text>
+            <Text style={[styles.titleText]}>{title}</Text>
           </View>
           {rightIcon && (
             <TouchableOpacity style={styles.icon}>
-              <Icon name="bell" size={30} color="#fff" />
+              <Icon name="bell" size={30} color={CONTRAST_COLOR} />
             </TouchableOpacity>
           )}
         </View>

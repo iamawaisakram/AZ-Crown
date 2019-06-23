@@ -15,20 +15,24 @@ import styles from '../../assets/stylesheets/home';
 
 class Home extends Component {
   render() {
+    const { navigation } = this.props;
     return (
       <View style={styles.container}>
         <Header
           leftIcon={true}
           rightIcon={true}
+          backIcon={false}
           title="Home"
-          statusBarColor={PRIMARY_COLOR}
-          secondaryColor={SECONDARY_COLOR}
           {...this.props}
         />
         <View style={styles.menu}>
           <View style={styles.leftMenu}>
             {homeMenuLeft.map((item, i) => (
-              <TouchableOpacity key={i} style={styles.menuItem}>
+              <TouchableOpacity
+                key={i}
+                onPress={() => navigation.navigate(item.key)}
+                style={styles.menuItem}
+              >
                 <Image source={item.icon} style={styles.icon} />
                 <Text style={styles.itemTitle}>{item.title}</Text>
               </TouchableOpacity>

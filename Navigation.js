@@ -18,6 +18,14 @@ import Home from './pages/home/Home';
 //Login
 import Login from './pages/login/Login';
 
+//she observation
+import SheObservation from './pages/sheObservation/SheObservation';
+import CreateStopCard from './pages/sheObservation/CreateStopCard';
+import StopCardFeedback from './pages/sheObservation/StopCardFeedback';
+import AssignedStopCard from './pages/sheObservation/AssignedStopCard';
+import CreateGoCard from './pages/sheObservation/CreateGoCard';
+import AssignedGoCard from './pages/sheObservation/AssignedGoCard';
+
 const drawerNavigator = createDrawerNavigator(
   {
     Home: {
@@ -39,11 +47,27 @@ const drawerNavigator = createDrawerNavigator(
   }
 );
 
+const stackNavigator = createStackNavigator(
+  {
+    SheObservation,
+    CreateStopCard,
+    StopCardFeedback,
+    AssignedStopCard,
+    CreateGoCard,
+    AssignedGoCard
+  },
+  {
+    initialRouteName: 'SheObservation',
+    headerMode: 'none'
+  }
+);
+
 export default createAppContainer(
   createSwitchNavigator(
     {
       SplashScreen,
       Login,
+      stackNavigator,
       drawerNavigator
     },
     {

@@ -40,8 +40,6 @@ class Login extends Component {
           leftIcon={false}
           rightIcon={false}
           title={'Login'}
-          statusBarColor={PRIMARY_COLOR}
-          secondaryColor={SECONDARY_COLOR}
           {...this.props}
         />
         <View style={styles.inputs}>
