@@ -15,7 +15,7 @@ import styles from '../../assets/stylesheets/splashScreen';
 class SplashScreen extends Component {
   async componentDidMount() {
     setTimeout(() => {
-      this.props.navigation.navigate('ManualHandlingTraining');
+      this.props.navigation.navigate('DocumentTraining');
     }, 1000);
   }
 

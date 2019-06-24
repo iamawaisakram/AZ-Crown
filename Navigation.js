@@ -38,6 +38,11 @@ import TrainingActions from './pages/sheTraining/TrainingActions';
 import Results from './pages/sheTraining/Results';
 import ManualHandlingTraining from './pages/sheTraining/ManualHandlingTraining';
 
+//She Douments
+import SheDocuments from './pages/sheDocuments/SheDocuments';
+import DocumentActions from './pages/sheDocuments/DocumentActions';
+import DocumentTraining from './pages/sheDocuments/DocumentTraining';
+
 const drawerNavigator = createDrawerNavigator(
   {
     Home: {
@@ -76,7 +81,11 @@ const stackNavigator = createStackNavigator(
     SheTraining,
     TrainingActions,
     Results,
-    ManualHandlingTraining
+    ManualHandlingTraining,
+
+    SheDocuments,
+    DocumentActions,
+    DocumentTraining
   },
   {
     headerMode: 'none'
