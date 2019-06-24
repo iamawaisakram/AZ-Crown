@@ -10,7 +10,7 @@ import { PRIMARY_COLOR, SECONDARY_COLOR } from '../../config';
 //style
 import styles from '../../assets/stylesheets/sheGames';
 
-class SheGames extends Component {
+class SheFlashes extends Component {
   render() {
     const { navigation } = this.props;
     return (
@@ -20,7 +20,7 @@ class SheGames extends Component {
           rightIcon={false}
           backIcon={true}
           backTo={'Home'}
-          title="She Games"
+          title="She Flashes"
           {...this.props}
         />
         <View style={styles.menu}>
@@ -42,4 +42,4 @@ class SheGames extends Component {
   }
 }
 
-export default SheGames;
+export default SheFlashes;

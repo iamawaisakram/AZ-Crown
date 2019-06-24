@@ -62,6 +62,11 @@ import SheGames from './pages/sheGames/SheGames';
 import GamesActions from './pages/sheGames/GamesActions';
 import GameDetails from './pages/sheGames/GameDetails';
 
+//She Flashes
+import SheFlashes from './pages/sheFlashes/SheFlashes';
+import FlashActions from './pages/sheFlashes/FlashActions';
+import FlashDetails from './pages/sheFlashes/FlashDetails';
+
 const drawerNavigator = createDrawerNavigator(
   {
     Home: {
@@ -119,7 +124,11 @@ const stackNavigator = createStackNavigator(
 
     SheGames,
     GamesActions,
-    GameDetails
+    GameDetails,
+
+    SheFlashes,
+    FlashDetails,
+    FlashActions
   },
   {
     headerMode: 'none'
