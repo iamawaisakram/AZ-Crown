@@ -53,6 +53,10 @@ import GPSActions from './pages/visitedGPS/GPSActions';
 import ExportGPS from './pages/visitedGPS/ExportGPS';
 import ModifyUser from './pages/visitedGPS/ModifyUser';
 
+//Emergency Contacts
+import EmergencyContacts from './pages/emegencyContacts/EmergencyContacts';
+import ContactsActions from './pages/emegencyContacts/ContactsActions';
+
 const drawerNavigator = createDrawerNavigator(
   {
     Home: {
@@ -103,7 +107,10 @@ const stackNavigator = createStackNavigator(
     VisitedGPS,
     GPSActions,
     ExportGPS,
-    ModifyUser
+    ModifyUser,
+
+    EmergencyContacts,
+    ContactsActions
   },
   {
     headerMode: 'none'
