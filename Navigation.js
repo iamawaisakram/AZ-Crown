@@ -43,6 +43,10 @@ import SheDocuments from './pages/sheDocuments/SheDocuments';
 import DocumentActions from './pages/sheDocuments/DocumentActions';
 import DocumentTraining from './pages/sheDocuments/DocumentTraining';
 
+//She Checklists
+import SheChecklist from './pages/sheChecklist/SheChecklist';
+import ChecklistActions from './pages/sheChecklist/ChecklistActions';
+
 const drawerNavigator = createDrawerNavigator(
   {
     Home: {
@@ -85,7 +89,10 @@ const stackNavigator = createStackNavigator(
 
     SheDocuments,
     DocumentActions,
-    DocumentTraining
+    DocumentTraining,
+
+    SheChecklist,
+    ChecklistActions
   },
   {
     headerMode: 'none'
