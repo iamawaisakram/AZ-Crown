@@ -42,7 +42,7 @@ export const homeMenuRight = [
   {
     icon: require('../assets/images/gps.png'),
     title: 'VISITED GPS',
-    key: 'VisitedGps'
+    key: 'VisitedGPS'
   },
   {
     icon: require('../assets/images/emergency-contact.png'),

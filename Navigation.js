@@ -47,6 +47,12 @@ import DocumentTraining from './pages/sheDocuments/DocumentTraining';
 import SheChecklist from './pages/sheChecklist/SheChecklist';
 import ChecklistActions from './pages/sheChecklist/ChecklistActions';
 
+//Visited GPS
+import VisitedGPS from './pages/visitedGPS/VisitedGPS';
+import GPSActions from './pages/visitedGPS/GPSActions';
+import ExportGPS from './pages/visitedGPS/ExportGPS';
+import ModifyUser from './pages/visitedGPS/ModifyUser';
+
 const drawerNavigator = createDrawerNavigator(
   {
     Home: {
@@ -92,7 +98,12 @@ const stackNavigator = createStackNavigator(
     DocumentTraining,
 
     SheChecklist,
-    ChecklistActions
+    ChecklistActions,
+
+    VisitedGPS,
+    GPSActions,
+    ExportGPS,
+    ModifyUser
   },
   {
     headerMode: 'none'
