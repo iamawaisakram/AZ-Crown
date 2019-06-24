@@ -57,6 +57,11 @@ import ModifyUser from './pages/visitedGPS/ModifyUser';
 import EmergencyContacts from './pages/emegencyContacts/EmergencyContacts';
 import ContactsActions from './pages/emegencyContacts/ContactsActions';
 
+//She Games
+import SheGames from './pages/sheGames/SheGames';
+import GamesActions from './pages/sheGames/GamesActions';
+import GameDetails from './pages/sheGames/GameDetails';
+
 const drawerNavigator = createDrawerNavigator(
   {
     Home: {
@@ -110,7 +115,11 @@ const stackNavigator = createStackNavigator(
     ModifyUser,
 
     EmergencyContacts,
-    ContactsActions
+    ContactsActions,
+
+    SheGames,
+    GamesActions,
+    GameDetails
   },
   {
     headerMode: 'none'

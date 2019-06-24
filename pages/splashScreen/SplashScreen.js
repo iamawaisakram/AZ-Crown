@@ -15,7 +15,7 @@ import styles from '../../assets/stylesheets/splashScreen';
 class SplashScreen extends Component {
   async componentDidMount() {
     setTimeout(() => {
-      this.props.navigation.navigate('ContactsActions');
+      this.props.navigation.navigate('GameDetails');
     }, 1000);
   }
 
