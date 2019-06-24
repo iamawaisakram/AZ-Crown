@@ -32,6 +32,12 @@ import CreateNewAction from './pages/sheTracks/CreateNewAction';
 import SheActionFeedback from './pages/sheTracks/SheActionFeedback';
 import AssignedSheAction from './pages/sheTracks/AssignedSheAction';
 
+//She Training
+import SheTraining from './pages/sheTraining/SheTraining';
+import TrainingActions from './pages/sheTraining/TrainingActions';
+import Results from './pages/sheTraining/Results';
+import ManualHandlingTraining from './pages/sheTraining/ManualHandlingTraining';
+
 const drawerNavigator = createDrawerNavigator(
   {
     Home: {
@@ -61,10 +67,16 @@ const stackNavigator = createStackNavigator(
     AssignedStopCard,
     CreateGoCard,
     AssignedGoCard,
+
     SheTracks,
     CreateNewAction,
     SheActionFeedback,
-    AssignedSheAction
+    AssignedSheAction,
+
+    SheTraining,
+    TrainingActions,
+    Results,
+    ManualHandlingTraining
   },
   {
     headerMode: 'none'

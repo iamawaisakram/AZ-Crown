@@ -8,9 +8,9 @@ import Header from '../../components/Header';
 import { PRIMARY_COLOR, SECONDARY_COLOR } from '../../config';
 
 //style
-import styles from '../../assets/stylesheets/sheTracks';
+import styles from '../../assets/stylesheets/sheTraining';
 
-class SheTracks extends Component {
+class SheTraining extends Component {
   render() {
     const { navigation } = this.props;
     return (
@@ -20,18 +20,18 @@ class SheTracks extends Component {
           rightIcon={false}
           backIcon={true}
           backTo={'Home'}
-          title="She Tracks"
+          title="She Training"
           {...this.props}
         />
         <View style={styles.sheTracksMenu}>
           <View style={styles.panel}>
-            <Text style={styles.panelText}>Open All Actions</Text>
+            <Text style={styles.panelText}>Open All She Training</Text>
           </View>
           <View style={styles.panel}>
-            <Text style={styles.panelText}>Create New Action</Text>
+            <Text style={styles.panelText}>Create/Remove/Modify</Text>
           </View>
           <View style={styles.panel}>
-            <Text style={styles.panelText}>Import/Export Actions</Text>
+            <Text style={styles.panelText}>Export Training Records</Text>
           </View>
         </View>
       </View>
@@ -39,4 +39,4 @@ class SheTracks extends Component {
   }
 }
 
-export default SheTracks;
+export default SheTraining;
