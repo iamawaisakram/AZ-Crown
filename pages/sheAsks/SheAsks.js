@@ -7,6 +7,7 @@ import {
   Keyboard,
   TextInput
 } from 'react-native';
+import ActionSheet from 'react-native-actionsheet';
 
 //Components
 import Header from '../../components/Header';
@@ -42,6 +43,14 @@ class SheAsks extends Component {
   render() {
     const { message } = this.state;
     const { navigation } = this.props;
+    const OPTIONS = [
+      'Cancel',
+      'Camera',
+      'Photo and Video Library',
+      'Document',
+      'Location',
+      'Contact'
+    ];
     return (
       <View
         style={styles.container}
@@ -68,7 +77,10 @@ class SheAsks extends Component {
           </View>
         </View>
         <View style={styles.bottomBar}>
-          <TouchableOpacity style={styles.addFilesView}>
+          <TouchableOpacity
+            style={styles.addFilesView}
+            onPress={() => this.ActionSheet.show()}
+          >
             <Icon name="plus" color={CONTRAST_COLOR} size={30} />
           </TouchableOpacity>
           <View style={styles.inputView}>
@@ -87,6 +99,13 @@ class SheAsks extends Component {
             <FIcon name="microphone" color={CONTRAST_COLOR} size={30} />
           </TouchableOpacity>
         </View>
+        <ActionSheet
+          ref={o => (this.ActionSheet = o)}
+          title={'Select'}
+          options={OPTIONS}
+          cancelButtonIndex={0}
+          onPress={index => {}}
+        />
       </View>
     );
   }
