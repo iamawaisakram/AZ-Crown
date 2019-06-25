@@ -36,9 +36,12 @@ class SheDocuments extends Component {
           <View style={styles.panel}>
             <Text style={styles.panelText}>SDS</Text>
           </View>
-          <View style={styles.panel}>
+          <TouchableOpacity
+            style={styles.panel}
+            onPress={() => navigation.navigate('DocumentActions')}
+          >
             <Text style={styles.panelText}>Creat/Remove/Modify</Text>
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
     );
