@@ -57,7 +57,10 @@ class EmergencyContacts extends Component {
             </View>
           </View>
         </View>
-        <TouchableOpacity style={styles.submitButton}>
+        <TouchableOpacity
+          style={styles.submitButton}
+          onPress={() => navigation.navigate('ContactsActions')}
+        >
           <Text style={styles.submitText}>Create/Remove/Modify</Text>
         </TouchableOpacity>
       </View>
