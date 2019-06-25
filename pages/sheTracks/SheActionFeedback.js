@@ -42,6 +42,7 @@ class SheActionFeedback extends Component {
 
   render() {
     const { comment, feedbackDetails, observationDetails } = this.state;
+    const { navigation } = this.props;
     return (
       <View
         style={styles.container}
@@ -93,10 +94,16 @@ class SheActionFeedback extends Component {
             />
           </View>
           <View style={styles.multipleButtonsView}>
-            <TouchableOpacity style={styles.multipleButton}>
+            <TouchableOpacity
+              style={styles.multipleButton}
+              onPress={() => navigation.navigate('Home')}
+            >
               <Text style={styles.submitText}>Accept & Close</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.multipleButton}>
+            <TouchableOpacity
+              style={styles.multipleButton}
+              onPress={() => navigation.navigate('AssignedSheAction')}
+            >
               <Text style={styles.submitText}>Reject & Re-Assign</Text>
             </TouchableOpacity>
           </View>

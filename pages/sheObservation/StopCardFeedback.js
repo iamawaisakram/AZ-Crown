@@ -94,7 +94,10 @@ class StopCardFeedback extends Component {
             />
           </View>
           <View style={styles.multipleButtonsView}>
-            <TouchableOpacity style={styles.multipleButton}>
+            <TouchableOpacity
+              style={styles.multipleButton}
+              onPress={() => navigation.navigate('Home')}
+            >
               <Text style={styles.submitText}>Accept & Close</Text>
             </TouchableOpacity>
             <TouchableOpacity

@@ -71,6 +71,17 @@ class Alerts extends Component {
                     You've Recieved A Go Card
                   </Text>
                 </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.element}
+                  onPress={() => {
+                    hideModal();
+                    navigation.navigate('SheActionFeedback');
+                  }}
+                >
+                  <Text style={styles.elementText}>
+                    You've Recieved A She Action
+                  </Text>
+                </TouchableOpacity>
               </ScrollView>
             </View>
           </TouchableWithoutFeedback>

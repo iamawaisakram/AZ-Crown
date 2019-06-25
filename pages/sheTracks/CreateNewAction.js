@@ -42,6 +42,7 @@ class CreateNewAction extends Component {
 
   render() {
     const { actionDetails, title } = this.state;
+    const { navigation } = this.props;
     return (
       <View
         style={styles.container}
@@ -114,7 +115,10 @@ class CreateNewAction extends Component {
               <Icon name="paperclip" color={CONTRAST_COLOR} size={25} />
             </TouchableOpacity>
           </View>
-          <TouchableOpacity style={styles.submitButton}>
+          <TouchableOpacity
+            style={styles.submitButton}
+            onPress={() => navigation.navigate('SheTracks')}
+          >
             <Text style={styles.submitText}>Submit</Text>
           </TouchableOpacity>
         </View>

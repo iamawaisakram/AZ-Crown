@@ -42,6 +42,7 @@ class AssignedSheAction extends Component {
 
   render() {
     const { comment, observationDetails } = this.state;
+    const { navigation } = this.props;
     return (
       <View
         style={styles.container}
@@ -106,7 +107,10 @@ class AssignedSheAction extends Component {
               <Icon name="paperclip" color={CONTRAST_COLOR} size={25} />
             </TouchableOpacity>
           </View>
-          <TouchableOpacity style={styles.submitButton}>
+          <TouchableOpacity
+            style={styles.submitButton}
+            onPress={() => navigation.navigate('Home')}
+          >
             <Text style={styles.submitText}>Submit</Text>
           </TouchableOpacity>
         </View>

@@ -27,9 +27,12 @@ class SheTracks extends Component {
           <View style={styles.panel}>
             <Text style={styles.panelText}>Open All Actions</Text>
           </View>
-          <View style={styles.panel}>
+          <TouchableOpacity
+            style={styles.panel}
+            onPress={() => navigation.navigate('CreateNewAction')}
+          >
             <Text style={styles.panelText}>Create New Action</Text>
-          </View>
+          </TouchableOpacity>
           <View style={styles.panel}>
             <Text style={styles.panelText}>Import/Export Actions</Text>
           </View>
