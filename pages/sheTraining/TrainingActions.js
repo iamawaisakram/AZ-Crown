@@ -43,6 +43,7 @@ class TrainingActions extends Component {
 
   render() {
     const { trainingName, trainingMaterial, passScore, quiz } = this.state;
+    const { navigation } = this.props;
     return (
       <View
         style={styles.container}
@@ -113,7 +114,10 @@ class TrainingActions extends Component {
             <Text style={styles.inputTitle}>Modify</Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.submitButton}>
+        <TouchableOpacity
+          style={styles.submitButton}
+          onPress={() => navigation.navigate('SheTraining')}
+        >
           <Text style={styles.submitText}>Submit</Text>
         </TouchableOpacity>
       </View>

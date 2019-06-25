@@ -27,9 +27,12 @@ class SheTraining extends Component {
           <View style={styles.panel}>
             <Text style={styles.panelText}>Open All She Training</Text>
           </View>
-          <View style={styles.panel}>
+          <TouchableOpacity
+            style={styles.panel}
+            onPress={() => navigation.navigate('TrainingActions')}
+          >
             <Text style={styles.panelText}>Create/Remove/Modify</Text>
-          </View>
+          </TouchableOpacity>
           <View style={styles.panel}>
             <Text style={styles.panelText}>Export Training Records</Text>
           </View>
