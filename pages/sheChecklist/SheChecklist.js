@@ -27,9 +27,12 @@ class SheChecklist extends Component {
           <View style={styles.panel}>
             <Text style={styles.panelText}>All Checklists</Text>
           </View>
-          <View style={styles.panel}>
+          <TouchableOpacity
+            style={styles.panel}
+            onPress={() => navigation.navigate('ChecklistActions')}
+          >
             <Text style={styles.panelText}>Creat/Remove/Modify</Text>
-          </View>
+          </TouchableOpacity>
           <View style={styles.panel}>
             <Text style={styles.panelText}>Open Submitted Checklists</Text>
           </View>
