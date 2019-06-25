@@ -24,17 +24,29 @@ class SheFlashes extends Component {
           {...this.props}
         />
         <View style={styles.menu}>
-          <View style={styles.panel}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('FlashDetails')}
+            style={styles.panel}
+          >
             <Text style={styles.panelText}>Emergency Management</Text>
-          </View>
-          <View style={styles.panel}>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('FlashDetails')}
+            style={styles.panel}
+          >
             <Text style={styles.panelText}>Risk Management</Text>
-          </View>
-          <View style={styles.panel}>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('FlashDetails')}
+            style={styles.panel}
+          >
             <Text style={styles.panelText}>Speed Management</Text>
-          </View>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.submitButton}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('FlashActions')}
+          style={styles.submitButton}
+        >
           <Text style={styles.submitText}>Create/Remove/Modify</Text>
         </TouchableOpacity>
       </View>
