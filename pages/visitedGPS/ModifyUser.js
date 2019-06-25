@@ -30,6 +30,7 @@ class ModifyUser extends Component {
 
   render() {
     const { userName, phoneNumber } = this.state;
+    const { navigation } = this.props;
     return (
       <View style={styles.container}>
         <Header
@@ -74,7 +75,10 @@ class ModifyUser extends Component {
             <Text style={styles.inputTitle}>Modify</Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.submitButton}>
+        <TouchableOpacity
+          style={styles.submitButton}
+          onPress={() => navigation.navigate('VisitedGPS')}
+        >
           <Text style={styles.submitText}>Submit</Text>
         </TouchableOpacity>
       </View>

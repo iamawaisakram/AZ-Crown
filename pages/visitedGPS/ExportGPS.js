@@ -41,6 +41,7 @@ class ExportGPS extends Component {
 
   render() {
     const { lat, long } = this.state;
+    const { navigation } = this.props;
     return (
       <View
         style={styles.container}
@@ -80,7 +81,10 @@ class ExportGPS extends Component {
             </View>
           </View>
         </View>
-        <TouchableOpacity style={styles.submitButton}>
+        <TouchableOpacity
+          style={styles.submitButton}
+          onPress={() => navigation.navigate('VisitedGPS')}
+        >
           <Text style={styles.submitText}>Export</Text>
         </TouchableOpacity>
       </View>

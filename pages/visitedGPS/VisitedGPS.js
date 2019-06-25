@@ -27,15 +27,24 @@ class VisitedGPS extends Component {
           <View style={styles.panel}>
             <Text style={styles.panelText}>Open Visual GPS</Text>
           </View>
-          <View style={styles.panel}>
+          <TouchableOpacity
+            style={styles.panel}
+            onPress={() => navigation.navigate('ModifyUser')}
+          >
             <Text style={styles.panelText}>Creat/Remove/Modify User</Text>
-          </View>
-          <View style={styles.panel}>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.panel}
+            onPress={() => navigation.navigate('ExportGPS')}
+          >
             <Text style={styles.panelText}>Export Visual GPS Records</Text>
-          </View>
-          <View style={styles.panel}>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.panel}
+            onPress={() => navigation.navigate('GPSActions')}
+          >
             <Text style={styles.panelText}>Modif Lat/Long</Text>
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
     );
