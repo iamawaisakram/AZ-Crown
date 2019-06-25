@@ -24,17 +24,29 @@ class SheGames extends Component {
           {...this.props}
         />
         <View style={styles.menu}>
-          <View style={styles.panel}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('GameDetails')}
+            style={styles.panel}
+          >
             <Text style={styles.panelText}>Emergency Management</Text>
-          </View>
-          <View style={styles.panel}>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('GameDetails')}
+            style={styles.panel}
+          >
             <Text style={styles.panelText}>Risk Management</Text>
-          </View>
-          <View style={styles.panel}>
+          </TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('GameDetails')}
+            style={styles.panel}
+          >
             <Text style={styles.panelText}>Speed Management</Text>
-          </View>
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.submitButton}>
+        <TouchableOpacity
+          style={styles.submitButton}
+          onPress={() => navigation.navigate('GamesActions')}
+        >
           <Text style={styles.submitText}>Create/Remove/Modify</Text>
         </TouchableOpacity>
       </View>

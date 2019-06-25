@@ -43,6 +43,7 @@ class GamesActions extends Component {
 
   render() {
     const { checklistName, uploadChecklist, trainingMaterial } = this.state;
+    const { navigation } = this.props;
     return (
       <View
         style={styles.container}
@@ -103,7 +104,10 @@ class GamesActions extends Component {
             <Text style={styles.inputTitle}>Modify</Text>
           </TouchableOpacity>
         </View>
-        <TouchableOpacity style={styles.submitButton}>
+        <TouchableOpacity
+          style={styles.submitButton}
+          onPress={() => navigation.navigate('SheGames')}
+        >
           <Text style={styles.submitText}>Submit</Text>
         </TouchableOpacity>
       </View>
