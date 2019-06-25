@@ -42,6 +42,7 @@ class StopCardFeedback extends Component {
 
   render() {
     const { comment, feedbackDetails, observationDetails } = this.state;
+    const { navigation } = this.props;
     return (
       <View
         style={styles.container}
@@ -96,7 +97,10 @@ class StopCardFeedback extends Component {
             <TouchableOpacity style={styles.multipleButton}>
               <Text style={styles.submitText}>Accept & Close</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.multipleButton}>
+            <TouchableOpacity
+              style={styles.multipleButton}
+              onPress={() => navigation.navigate('AssignedStopCard')}
+            >
               <Text style={styles.submitText}>Reject & Re-Assign</Text>
             </TouchableOpacity>
           </View>

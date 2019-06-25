@@ -42,6 +42,7 @@ class AssignedGoCard extends Component {
 
   render() {
     const { comment, observationDetails } = this.state;
+    const { navigation } = this.props;
     return (
       <View
         style={styles.container}
@@ -56,7 +57,7 @@ class AssignedGoCard extends Component {
           {...this.props}
         />
         <View style={styles.inputContainers}>
-          <View style={styles.inputAndPhoto}>
+          <View style={styles.inputAndPhotoAssign}>
             <TextInput
               style={styles.observationDetailsAssignedCard}
               multiline={true}
@@ -79,7 +80,10 @@ class AssignedGoCard extends Component {
               onChangeText={value => this.setValue('comment', value)}
             />
           </View>
-          <TouchableOpacity style={styles.submitButton}>
+          <TouchableOpacity
+            style={styles.submitButton}
+            onPress={() => navigation.navigate('Home')}
+          >
             <Text style={styles.submitText}>Submit & Close</Text>
           </TouchableOpacity>
         </View>

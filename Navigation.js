@@ -67,6 +67,9 @@ import SheFlashes from './pages/sheFlashes/SheFlashes';
 import FlashActions from './pages/sheFlashes/FlashActions';
 import FlashDetails from './pages/sheFlashes/FlashDetails';
 
+//She Asks
+import SheAsks from './pages/sheAsks/SheAsks';
+
 const drawerNavigator = createDrawerNavigator(
   {
     Home: {
@@ -128,7 +131,9 @@ const stackNavigator = createStackNavigator(
 
     SheFlashes,
     FlashDetails,
-    FlashActions
+    FlashActions,
+
+    SheAsks
   },
   {
     headerMode: 'none'

@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { widthPercentageToDP } from 'react-native-responsive-screen';
 
-//StatusBae
+//Component
+import Alerts from './Alerts';
+
+//status bar
 import { MyStatusBar } from './StatusBar';
 
 //Icon
@@ -18,7 +21,21 @@ class Header extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      modal: false
+    };
+  }
+
+  showModal() {
+    this.setState({ modal: true });
+  }
+
+  hideModal() {
+    this.setState({ modal: false });
+  }
+
+  componentWillUnmount() {
+    this.hideModal();
   }
 
   render() {
@@ -62,11 +79,19 @@ class Header extends Component {
             <Text style={[styles.titleText]}>{title}</Text>
           </View>
           {rightIcon && (
-            <TouchableOpacity style={styles.icon}>
+            <TouchableOpacity
+              style={styles.icon}
+              onPress={() => this.showModal()}
+            >
               <Icon name="bell" size={30} color={CONTRAST_COLOR} />
             </TouchableOpacity>
           )}
         </View>
+        <Alerts
+          {...this.props}
+          hideModal={this.hideModal.bind(this)}
+          modal={this.state.modal}
+        />
       </View>
     );
   }

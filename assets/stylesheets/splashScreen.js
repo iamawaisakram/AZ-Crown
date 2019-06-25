@@ -5,7 +5,7 @@ import {
 } from 'react-native-responsive-screen';
 
 //config
-import { SECONDARY_COLOR } from '../../config';
+import { SECONDARY_COLOR, PRIMARY_COLOR } from '../../config';
 
 export default StyleSheet.create({
   container: {
@@ -13,7 +13,7 @@ export default StyleSheet.create({
     height: hp('100%'),
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: SECONDARY_COLOR
+    backgroundColor: PRIMARY_COLOR
   },
   imageView: {
     width: wp('100%'),

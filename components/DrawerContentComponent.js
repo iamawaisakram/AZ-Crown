@@ -48,7 +48,7 @@ class DrawerContentComponent extends Component {
         <View style={styles.screenContainer}>
           <TouchableOpacity
             style={styles.navigationCell}
-            onPress={() => this.navigateToScreen('Home')}
+            onPress={() => this.navigateToScreen('Login')}
           >
             <View style={styles.cellIcon}>
               <Icon name="log-out" color={CONTRAST_COLOR} size={30} />
