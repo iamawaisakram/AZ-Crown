@@ -3,10 +3,14 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp
 } from 'react-native-responsive-screen';
+import { PRIMARY_COLOR, SECONDARY_COLOR, CONTRAST_COLOR } from '../../config';
 
 export default StyleSheet.create({
   container: {
-    alignItems: 'center'
+    alignItems: 'center',
+    height: hp('100%'),
+    width: wp('60%'),
+    backgroundColor: PRIMARY_COLOR
   },
   menuBarIcon: {
     position: 'absolute',
@@ -17,58 +21,33 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  headerContainer: {
-    height: hp('17%'),
-    width: wp('40%'),
-    alignItems: 'flex-start',
-    justifyContent: 'flex-end'
-  },
-  profileImage: {
-    width: wp('20%'),
+  screenContainer: {
     height: hp('10%'),
-    resizeMode: 'contain'
-  },
-  profileText: {
-    fontSize: wp('4.5%'),
-    fontWeight: '800',
-    color: '#000',
-    marginTop: hp('2%')
-  },
-  screenContainerFirst: {
-    marginTop: hp('2%'),
-    height: hp('28%'),
-    width: wp('40%'),
-    justifyContent: 'flex-start',
-    alignItems: 'flex-end'
+    width: wp('60%'),
+    // marginTop: hp('1%'),
+    backgroundColor: PRIMARY_COLOR,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   navigationCell: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: wp('40%'),
+    width: wp('60%'),
     alignItems: 'center',
-    height: hp('5%')
+    height: hp('10%')
   },
   cellIcon: {
-    width: wp('8%')
+    width: wp('15%'),
+    height: hp('10%'),
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   navigationCellText: {
-    width: wp('32%'),
+    width: wp('40%'),
     textAlign: 'left',
-    fontSize: wp('5%'),
-    fontWeight: '400'
-  },
-  screenContainerSecond: {
-    marginTop: hp('2%'),
-    height: hp('15%'),
-    width: wp('40%'),
-    justifyContent: 'flex-start',
-    alignItems: 'flex-end'
-  },
-  screenContainerThird: {
-    marginTop: hp('2%'),
-    height: hp('10%'),
-    width: wp('40%'),
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end'
+    color: CONTRAST_COLOR,
+    fontSize: wp('4%'),
+    fontWeight: '700',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
